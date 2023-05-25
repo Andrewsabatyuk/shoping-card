@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
-import Button from 'react-bootstrap/Button';
+
+import { CardItem } from '../components/Card';
 
 export const Store = () => {
     const [items, setItems] = useState([]);
@@ -8,12 +9,10 @@ export const Store = () => {
         const data = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=119219a8d0dc4e509c8ef94b97df01ac`);
         const recepies = await data.json();
         setItems(recepies.results);
-        // console.log(recepies);
     }
 
     useEffect(() => {
         getCuisine()
-
     }, [])
 
     return (
@@ -21,12 +20,16 @@ export const Store = () => {
             {items && (
                 <div className='container'>
                     {items.map(item => (
-                        <div className='cart-item' key={item.id}>
-                            <h2>{item.title}</h2>
-                            <img src={items.image} alt="" />
-                            <p>Price: {items.id}</p>
-                            <Button variant="primary">Add to Cart</Button>
-                        </div>
+                        // <div className='cart-item' key={item.id}
+                        // style={{width:'40%', border:'1px solid'}}
+                        // >
+                        //     <h2>{item.title}</h2>
+                        //     <img src={item.image} alt={item.title} style={{borderRadius:'3rem'}} />
+                        //     <p>Price: {item.id}</p>
+                        //     <Button variant="primary">Add to Cart</Button>
+                        // </div>
+                        <CardItem item={item} key={item.id} />
+                        // <CardItem {item} key={item.id}/>
                     ))}
                 </div>
             )}

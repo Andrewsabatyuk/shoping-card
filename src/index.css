@@ -1,17 +1,15 @@
-.cart-item{
-    background: orange;
-    display: flex;
-    /* flex-wrap: wrap; */
-    flex-direction: column;
-   
+.cart-item {
+  background: orange;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px lemonchiffon;
 }
-img{
-    width: 500px;
-    height: 500px;
-    border-radius: 10px;
-}
-.container{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
+
+.mb-3.container {
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
 }

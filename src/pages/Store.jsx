@@ -28,7 +28,7 @@ export const Store = () => {
                         //     <p>Price: {item.id}</p>
                         //     <Button variant="primary">Add to Cart</Button>
                         // </div>
-                        <CardItem item={item} key={item.id} />
+                        <CardItem title={item.title} id={item.id} image={item.image} key={item.id} />
                         // <CardItem {item} key={item.id}/>
                     ))}
                 </div>

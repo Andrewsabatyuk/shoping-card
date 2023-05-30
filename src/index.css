@@ -7,7 +7,7 @@
   border: 1px lemonchiffon;
 }
 
-.mb-3.container {
+.container {
   max-width: 100%;
   display: flex;
   flex-wrap: wrap;

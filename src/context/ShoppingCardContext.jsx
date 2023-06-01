@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { useContext } from "react";
 import { ShoppingCart } from "../components/ShoppingCart";
 
@@ -7,9 +7,36 @@ const ShoppingCartContext = createContext({})
 export function useShoppingCart() {
     return useContext(ShoppingCartContext)
 }
+
+
 export function ShoppingCartProvider({ children }) {
     const [cartItems, setCartItems] = useState([])
     const [isOpen, setIsOpen] = useState(false)
+
+    // from api
+    // const [items, setItems] = useState([]);
+
+    // const getCuisine = async () => {
+    //     const data = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=119219a8d0dc4e509c8ef94b97df01ac`)
+    //     const recepies = await data.json()
+    //     setItems(recepies.results)
+    // }
+
+    // useEffect(() => {
+    //     getCuisine()
+    // }, [])
+
+    // from JSON
+    const [items, setItems] = useState([]);
+    const getCuisine = async () => {
+        const data = await fetch('./products.json')
+        const pizzas = await data.json()
+        setItems(pizzas)
+    }
+
+    useEffect(() => {
+        getCuisine()
+    }, [])
 
     const openCart = () => setIsOpen(true)
     const closeCart = () => setIsOpen(false)
@@ -60,7 +87,8 @@ export function ShoppingCartProvider({ children }) {
     )
 
     return (
-        <ShoppingCartContext.Provider value={{ getItemQuantity, increaseCartQuantity, removeFromCart, decreaseCartQuantity, cartQuantity, cartItems, openCart, closeCart }}>
+        <ShoppingCartContext.Provider value={{items, getItemQuantity, increaseCartQuantity, removeFromCart, decreaseCartQuantity, cartQuantity, cartItems, openCart, closeCart }}>
+
             {children}
             <ShoppingCart isOpen={isOpen} />
         </ShoppingCartContext.Provider>)

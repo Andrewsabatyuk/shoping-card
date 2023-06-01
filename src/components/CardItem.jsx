@@ -1,8 +1,8 @@
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import { useShoppingCart } from '../context/ShoppingCardContext';
+import Button from 'react-bootstrap/Button'
+import Card from 'react-bootstrap/Card'
+import { useShoppingCart } from '../context/ShoppingCardContext'
 
-export const CardItem = ({ id, title, image }) => {
+export const CardItem = ({ id, title, image, price }) => {
     const { getItemQuantity, increaseCartQuantity, removeFromCart, decreaseCartQuantity } = useShoppingCart()
     const quantity = getItemQuantity(id)
 
@@ -11,7 +11,7 @@ export const CardItem = ({ id, title, image }) => {
             <Card.Img variant="top" src={image} />
             <Card.Body>
                 <Card.Title className="fs-3 d-flex justify-content-between align-items-baseline mb-4">{title}</Card.Title>
-                <p className="fs-4 ms-2 d-flex justify-content-between"><span>Price:</span> {id.toString().slice(2, 4)}$</p>
+                <p className="fs-4 ms-2 d-flex justify-content-between"><span>Price:</span> $ {price}</p>
 
                 <div className="mt-auto">
                     {quantity === 0 ? (

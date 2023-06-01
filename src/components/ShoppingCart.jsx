@@ -1,8 +1,8 @@
-import { Offcanvas, Stack } from "react-bootstrap";
-import { useShoppingCart } from "../context/ShoppingCardContext";
-import { ProductInBasket } from "./ProductInBasket";
+import { Offcanvas, Stack } from "react-bootstrap"
+import { useShoppingCart } from "../context/ShoppingCardContext"
+import { ProductInBasket } from "./ProductInBasket"
 
-export function ShoppingCart({ isOpen }) {
+export function ShoppingCart({ isOpen}) {
     const { closeCart, cartItems } = useShoppingCart()
 
     return (
@@ -15,7 +15,7 @@ export function ShoppingCart({ isOpen }) {
 
             <Offcanvas.Body>
                 <Stack gap={3}>
-                    {cartItems.map(item => (
+                    {cartItems.map((item) => (
                         <ProductInBasket key={item.id} {...item} />
                     ))}
                 </Stack>

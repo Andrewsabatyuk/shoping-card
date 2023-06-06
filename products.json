@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "title": "Pizza Paperoni",
+        "image": "https://boryspil.veteranopizza.com/public/uploads/site_catalog/original_209cfb326290c73b71f99a4cd35ec663.jpg",
+        "price": 15.99
+    },
+    {
+        "id": 2,
+        "title": "Pizza Hawai",
+        "image": "https://boryspil.veteranopizza.com/public/uploads/site_catalog/original_c193a67ab6702865fd92de31fd5408a0.jpg",
+        "price": 12.99
+    },
+    {
+        "id": 3,
+        "title":"Cheese Pizza",
+        "image": "https://boryspil.veteranopizza.com/public/uploads/site_catalog/original_9e349e0da978cd650bbaf5d2d681adf7.jpg",
+        "price": 14.99
+    },
+    {
+        "id": 4,
+        "title":"Pizza Diablo",
+        "image": "https://boryspil.veteranopizza.com/public/uploads/site_catalog/original_ca92251826e8c557a86f4164c8bf6eec.jpg",
+        "price": 18.99
+    },
+    {
+        "id": 5,
+        "title":"Pizza Caprese",
+        "image": "https://boryspil.veteranopizza.com/public/uploads/site_catalog/original_4a8858d51c1ea0889bafd29f03502bb4.jpg",
+        "price": 21.99
+    },
+    {
+        "id": 6,
+        "title":"Pizza Salmon",
+        "image": "https://boryspil.veteranopizza.com/public/uploads/site_catalog/original_e9d21eccf05ea2fd1e2625782c97f50c.jpg",
+        "price": 24.99
+    },
+    {
+        "id": 7,
+        "title":"Pizza Ham and mushrooms",
+        "image": "https://veteranopizza.com/public/uploads/site_catalog/original_373efe50da26cdbd5f79831d734d7038.jpg",
+        "price": 22.99
+    },
+    {
+        "id": 8,
+        "title":"Pizza Primavere",
+        "image": "https://veteranopizza.com/public/uploads/site_catalog/original_545107c12c1e740ac1c01e07d43e3d5f.jpg",
+        "price": 21.99
+    },
+    {
+        "id": 9,
+        "title":"Pizza Tirol",
+        "image": "https://boryspil.veteranopizza.com/public/uploads/site_catalog/original_eeca804ba4ad0086e1de9e7a1323390f.jpg",
+        "price": 18.99
+    },
+    {
+        "id": 10,
+        "title": "Pizza Dolche Pere",
+        "image": "https://boryspil.veteranopizza.com/public/uploads/site_catalog/original_88ca316579b10daafc58f1b58666cb8c.png",
+        "price": 17.99
+    }
+]

@@ -6,7 +6,7 @@ export function ProductInBasket({ id, quantity }) {
 
     const storeItem = items.find(i => i.id === id)
     if (storeItem === 0) return null
-   
+
     return (
         <>
             <Stack direction="horyzontal" gap={2} className='d-flex alighn-items-center'>

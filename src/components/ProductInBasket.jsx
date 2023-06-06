@@ -30,7 +30,8 @@ export function ProductInBasket({ id, quantity }) {
                     Delete from Cart
                 </Button>
             </Stack>
-            <Button variant="outline-primary" size='sm'> Make Order</Button>
+            <Button variant="outline-primary" size='sm'
+            onClick={() => alert('Thanks for your order!')}> Make Order</Button>
         </>
     )
 }
